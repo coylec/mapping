@@ -21,5 +21,6 @@ for lt, ln, nm, pk in zip(lat, lon, loc_name, park):
     fg.add_child(folium.Marker(location=[lt, ln], popup=nm, icon=folium.Icon(color=colour_picker(pk))))
 
 map.add_child(fg)
+map.add_child(folium.LayerControl())
 
 map.save("map1.html")
